@@ -195,7 +195,6 @@ function changeConfig($inputValue)
     //XML konfigurazioa
     $config = simplexml_load_file(APP_DIR . '/conf.xml');
 
-    //TODO: GARATZEKO
     if (isset($_POST['mainColor'])){
         $colorSeleccionado= $_POST['mainColor'];
         $config->mainColor = $colorSeleccionado;
@@ -207,6 +206,8 @@ function changeConfig($inputValue)
         $config->footerColor = $colorSeleccionado;
         $config->asXML(APP_DIR .'/conf.xml');
     }
+
+    //Ander: Bakoitza save egin beharrean  $config->asXML(APP_DIR .'/conf.xml'); behin jarrita bukaeran nahikoa da.
 
     //Orri nagusira redirekzioa egiteko
     $location = HREF_APP_DIR . "/src/views/main/index.php";

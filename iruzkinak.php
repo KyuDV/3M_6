@@ -7,6 +7,8 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //Ander: Bi aldiz dauzkazue hau gehituta, zergatik?
+
     $nombre = $_POST["nombre"];
     $correo = $_POST["correo"];
     $mensaje = $_POST["mensaje"];

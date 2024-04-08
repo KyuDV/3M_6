@@ -140,11 +140,16 @@ if ($result->num_rows > 0) {
     </form>
     <?php
      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        //Ander: Hemen ere errepikatutako kodea
+
+        //Gainera, hemen idazten duzuenez, orria birkargatzen baduzue berriz idatziko du kurtsoa.
+
         $nombre = $_POST["nombre"];
         $correo = $_POST["correo"];
         $mensaje = $_POST["mensaje"];
-        $kurtsoa = isset($_POST["kurtsoa"]) ? $_POST["kurtsoa"] : 1;
-   
+        $kurtsoa = isset($_POST["kurtsoa"]) ? $_POST["kurtsoa"] : 1; //Ander:Beti kurtsoa 1 hartuko du, kurtsoa $_GET bidez datorrelako. Nola konpondu dezakezue hori? 
+        //Ander: Hau konpontzen saiatu. Ez baduzue lortzen galdetu, GARRANTZITSUA DA
+
         // Cargar el archivo XML
         $xml = simplexml_load_file("iruzkinak.xml");
    
